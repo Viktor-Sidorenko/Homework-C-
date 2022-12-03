@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿int numberone = new Random().Next(1,10);
+int numbertwo = new Random().Next(1,10);
+int numberthree = new Random().Next(1,10);
+Console.WriteLine(numberone);
+Console.WriteLine(numbertwo);
+Console.WriteLine(numberthree);
+int max = numberone;
+if (numbertwo > max) max = numbertwo;
+if (numberthree > max) max = numberthree;
+Console.Write("max=");
+Console.WriteLine(max);
