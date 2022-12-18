@@ -1,12 +1,12 @@
 public class Library1
 {
-// Метод 1. Создания массива
+// Метод 1. Создания массива.
 public static int[] CreateArray(int count)
 {
    return new int[count];
 }
 
-//Метод 2. Заполнения массива
+//Метод 2. Заполнения массива.
 public static void Fill(int[]array, int min, int max)
 {
    for (int i = 0; i < array.Length; i++)
@@ -15,8 +15,8 @@ public static void Fill(int[]array, int min, int max)
    }
 }
 
-//Метод 3. Печати массива
-public static string Print(int[] array)
+//Метод 3. Печать массива для задачи 29.
+public static string PrintTask29(int[] array)
 {
    string output = String.Empty;
    for(int i = 0; i < array.Length;i++)
@@ -38,7 +38,7 @@ public static string Print(int[] array)
 }
 
 
-//Метод 4. Решение задачи 29
+//Метод 4. Решение задачи 29.
 public static int Task29(int[] array)
 {
    int u = 0;
@@ -54,7 +54,7 @@ public static int Task29(int[] array)
 }
 
 
-//Метод 5. Решение задачи 25
+//Метод 5. Решение задачи 25.
 public static int Task25(int a, int b)
 {
    int result = 1;
@@ -98,5 +98,78 @@ while (p > 0)
    t = t + 1;   
 }
 return t;   
+}
+
+//Метод 8. Решение задачи 34 
+public static string PrintTask34(int[] array)
+{
+   Console.WriteLine("Задача 34");
+   string output = String.Empty;
+   for(int i = 0; i < array.Length;i++)
+   {
+      output += ($"{array[i],7}");
+   }
+   output +=(" => ");
+   for(int i = 0; i < array.Length;i++)   
+    {                                         
+      if(array[i] % 2 == 0)
+      output += ($"{array[i],4}");
+   }
+   return output;
+}
+
+
+   
+//Метод 9. Решение задачи 36.   
+public static int Task36(int[] array)
+{
+int result = 0;
+for(int i = 1; i < array.Length;i = i + 2)    
+{
+   result += array[i];
+}
+return result;
+}
+
+//Метод 10. Печать массива.
+public static string Print(int[] array)
+{
+   string output = String.Empty;
+   for(int i = 0; i < array.Length;i++)
+   {
+     {
+         output += ($"{array[i],6}");
+     }
+   }
+   return output;
+}
+
+//Метод 11.Нахождение максимального значения. 
+public static double Numbermax(double[] array)
+{
+   double max = 0;
+   for(int i = 0;i < array.Length;i++)
+   {
+           if (max < array[i])
+       {
+          max = array[i];
+       }
+  
+   }
+return max;
+}
+
+//Метод 12.Нахождение минимального значения. 
+ public static double Numbermin(double[] array)
+{
+   double min = array[0];
+   for(int i = 0;i < array.Length;i++)
+   {
+       if (min > array[i])
+       {
+          min = array[i];
+       }
+   }
+return min;
 }
 }
