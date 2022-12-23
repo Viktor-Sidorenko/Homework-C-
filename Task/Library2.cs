@@ -73,3 +73,35 @@ public static void Task380()
    Console.WriteLine($" => {difference}");
 }
 }
+
+//Метод 7. Задача 41.
+public class Task41
+{
+public static void Task410()
+   { 
+    Console.WriteLine("Задача 41");
+    Console.Write("Введите кол-во чисел:");
+    int[] array1 = CreateArray(Convert.ToInt32(Console.ReadLine()));
+    Array1(array1);
+    PrintTask41(array1);
+   }
+}
+
+//Метод 8. Задача 43.
+public class Task43
+{
+public static void Task430()
+{    
+     Console.WriteLine("Задача 43");
+     Console.Write("Введите значение b1:");
+     double b1 = Double.Parse(Console.ReadLine());
+     Console.Write("Введите значение k1:");
+     double k1 = Double.Parse(Console.ReadLine());
+     Console.Write("Введите значение b2:");
+     double b2 = Double.Parse(Console.ReadLine());
+     Console.Write("Введите значение k2:");
+     double k2 = Double.Parse(Console.ReadLine());
+     Console.Write($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2}");
+     Console.WriteLine($" = > ({Task43(b1,b2,k1,k2)},{Task431(b2,k2,k1,b1)})");
+}     
+}

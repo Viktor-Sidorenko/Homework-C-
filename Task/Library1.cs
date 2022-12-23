@@ -1,6 +1,6 @@
 public class Library1
 {
-// Метод 1. Создания массива.
+// Метод 1. Созданиe массива.
 public static int[] CreateArray(int count)
 {
    return new int[count];
@@ -171,5 +171,53 @@ return max;
        }
    }
 return min;
+}
+
+//Метод 13. Ввод
+public static int Input1()
+ {
+  return Convert.ToInt32(Console.ReadLine());
+ }
+
+//Метод 14. Создание массива пользователем.
+public static void Array1(int[] array1)
+{
+for(int i = 0;i < array1.Length;i++)
+{
+ array1[i] = Input1();
+}
+}
+
+//Метод 15. Задача 41.
+public static int Task41(int[] array1)
+{
+   int g = 0;
+   for(int i = 0;i < array1.Length;i++)
+   {
+      if(array1[i] > 0) g++;
+   } 
+return g;
+}
+
+//Метод 16. Вывод задачи 41.
+public static void PrintTask41(int[] array1)
+{
+for(int i = 0; i < array1.Length;i++)
+{
+Console.Write($"{array1[i],4}");
+}
+Console.WriteLine($"  = > {Task41(array1),3}");
+}
+
+//Метод 17. Решение задачи 43.
+public static double Task43(double b1, double b2, double k1, double k2)
+{ 
+double x = (-b2 + b1)/(-k1 + k2);
+return x;
+}
+public static double Task431(double b2, double k2, double k1, double b1)
+{ 
+double y = k2 * Task43(b1,b2,k1,k2) + b2;
+return y;
 }
 }
