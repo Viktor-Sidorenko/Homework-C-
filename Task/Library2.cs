@@ -105,3 +105,40 @@ public static void Task430()
      Console.WriteLine($" = > ({Task43(b1,b2,k1,k2)},{Task431(b2,k2,k1,b1)})");
 }     
 }
+
+public class Task47
+{
+public static void Task470()
+{
+Console.WriteLine("Задача 47");
+double[,] br = Printtwodimensionalarray(3,4);
+Createarraytwo(br);
+Printarraytwo(br);
+}
+}
+
+public class Task50
+{
+    public static void Task500()
+    {
+      Console.WriteLine("Задача 50");
+      Console.Write("Введите число:");
+      int number = int.Parse(Console.ReadLine());
+      int[,] br = Printtwodimensionalarrayinteger(3,3);
+      Createarraytwointeger(br);
+      Printarraytwointeger(br);
+      decisiontask50(br,number);
+    }
+}
+
+public class Task52
+{
+    public static void Task520()
+    {
+      Console.WriteLine("Задача 52");
+      int[,] br = Printtwodimensionalarrayinteger(4,3);
+      Createarraytwointeger(br);
+      Printarraytwointeger(br);
+      decisiontask52(br);
+    }
+}

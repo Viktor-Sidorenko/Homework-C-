@@ -220,4 +220,102 @@ public static double Task431(double b2, double k2, double k1, double b1)
 double y = k2 * Task43(b1,b2,k1,k2) + b2;
 return y;
 }
+
+//Метод 18. Ввод вещественного двумерного массива
+
+public static double[,] Printtwodimensionalarray(int number1, int number2)
+{
+   return new double[number1,number2];
+}
+
+//Метод 19. Создание вещественного двумерного массива
+public static void Createarraytwo(double[,]arraytwo)
+{
+for(int o = 0;o < arraytwo.GetLength(0);o++)
+{
+    for(int g = 0;g < arraytwo.GetLength(1);g++)
+    {
+      arraytwo[o,g] = Math.Round(new Random().NextDouble(),1) + new Random().Next(1,20);
+    }
+}
+}
+
+//Метод 20. Вывод вещественного двумерного массива
+public static void Printarraytwo(double[,]arraytwo)
+{
+for (int x = 0;x < arraytwo.GetLength(0);x++)
+{
+   for(int m = 0;m < arraytwo.GetLength(1);m++)
+   {
+     Console.Write($"{arraytwo[x,m],5} ");  
+   }
+   Console.WriteLine();
+}
+}
+
+//Метод 21. Ввод целочисленного двумерного массива
+
+public static int[,] Printtwodimensionalarrayinteger(int number1, int number2)
+{
+   return new int[number1,number2];
+}
+
+//Метод 22. Создание целочисленного двумерного массива
+public static void Createarraytwointeger(int[,]arraytwo)
+{
+for(int o = 0;o < arraytwo.GetLength(0);o++)
+{
+    for(int g = 0;g < arraytwo.GetLength(1);g++)
+    {
+      arraytwo[o,g] = new Random().Next(1,100);
+    }
+}
+}
+
+//Метод 23. Вывод целочисленного двумерного массива
+public static void Printarraytwointeger(int[,]arraytwo)
+{
+for (int x = 0;x < arraytwo.GetLength(0);x++)
+{
+   for(int m = 0;m < arraytwo.GetLength(1);m++)
+   {
+     Console.Write($"{arraytwo[x,m],5} ");  
+   }
+   Console.WriteLine();
+}
+}
+
+//Метод 24. Решение задачи 50.
+public static void decisiontask50(int[,]arraytwo,int number)
+{
+bool test = false;
+for (int i = 0;i < arraytwo.GetLength(0);i++)
+{
+   for(int j = 0;j < arraytwo.GetLength(1);j++)
+   {
+       if (arraytwo[i,j] == number)
+            test = true;
+   }  
+}
+if (test)
+    Console.WriteLine($"Повторяется число -> {number}");
+else
+    Console.WriteLine($"{number} -> Нет такого числа");
+}
+
+public static void decisiontask52(int[,]arraytwo)
+{
+for(int j = 0;j < arraytwo.GetLength(1);j++)
+{
+double y = 0;
+double c = 0;
+for (int i = 0;i < arraytwo.GetLength(0);i++)
+{
+   c += arraytwo[i,j]; 
+   y = c / arraytwo.GetLength(0);
+   
+}
+Console.WriteLine($"Среднее арифметическое -> {y}");
+}
+}
 }
