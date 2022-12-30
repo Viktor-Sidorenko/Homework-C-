@@ -318,4 +318,167 @@ for (int i = 0;i < arraytwo.GetLength(0);i++)
 Console.WriteLine($"Среднее арифметическое -> {y}");
 }
 }
+
+
+//Метод 25. Создание двумерного целочисленного массива
+public static int[,] CreateArray2(int str, int rows)
+{
+    return new int[str,rows];
+}
+
+//Метод 26.Заполнение случайного двумерного массива
+public static void FillArray2(int[,] array, int min, int max)
+{
+    int size = array.GetLength(0);
+    int sizetwo = array.GetLength(1);
+    for(int i = 0; i < size;i++)
+    {
+        for(int j = 0;j < sizetwo;j++)
+        {
+    array[i,j] = new Random().Next(min,max);
+        }
+    }    
+}
+
+//Метод 27.Вывод массива построчно
+public static void PrintArray(int[,]array)
+{
+    int size = array.GetLength(0);
+    int sizetwo = array.GetLength(1);
+   
+        
+        for(int j = 0;j < sizetwo;j++)
+        {
+            for(int i = 0;i < size;i++)
+            {
+            Console.Write($"{array[i,j],5}");
+            }
+            Console.WriteLine();
+        }        
+}
+
+//Метод 28.Сортировка
+public static void Task54(int[,]array)
+{
+   for(int i = 0;i < array.GetLength(1);i++)
+   { 
+for (int j = 0; j < array.GetLength(0) - 1;j++) 
+{ 
+    for (int k = j + 1; k < array.GetLength(0); k++) 
+    { 
+        if (array[j,i] < array[k,i]) 
+        { 
+            int variable = array[k,i]; 
+            array[k,i] = array[j,i]; 
+            array[j,i] = variable; 
+        } 
+    }
+}
+   }
+}
+
+//Метод 29.Вывод отсортированного массива
+public static void PrintArrayTask54(int[,]array)
+{
+    int size = array.GetLength(0);
+    int sizetwo = array.GetLength(1);
+for(int j = 0;j < sizetwo;j++)
+{
+    for(int i = 0; i < size;i++)
+        {    
+            Console.Write($"{array[i,j],5}");
+        } 
+    Console.WriteLine();
+}   
+}
+
+//Метод 30.Сложение строк двумерного массива и нахождения минимальной строки
+public static void Task56(int[,]array,int[]array2)
+{
+   
+   for(int j = 0;j < array.GetLength(1);j++)
+   {
+    int result = 0;
+   for(int i = 0;i < array.GetLength(0);i++)
+    { 
+        result += array[i,j];
+    }
+    array2[j] = result;
+    Console.Write($"Строка {j + 1} = {result}");
+    Console.WriteLine();
+   }
+   int stroka = 0;
+   int min = array2[0];
+for(int g = 0; g < array2.Length;g++)
+{
+    if (min > array2[g]) 
+    {
+    min = array2[g];
+    stroka = g;
+    }
+}
+Console.Write($"Строка наименьшая:{stroka + 1}");
+Console.WriteLine(); 
+}
+
+//Метод 31. Создание трехмерного массива
+public static int[,,] Createarray2(int i,int j,int z)
+{
+ return new int [i,j,z];
+}
+
+//Метод 32. Создание одномерного массива
+public static int[] Createarray3(int i)   
+{
+   return new int[i];
+}
+
+//Метод 33. Заполнение трехмерного массива с проверкой на неповторяемость
+public static void Task60(int[,,]array,int[]array20)
+{
+int i2 = 0;
+for(int i = 0;i < array.GetLength(0);i++)
+   {
+       for(int j = 0;j < array.GetLength(1);j++)
+       {
+           for(int z = 0 ;z < array.GetLength(2);z++)
+           {
+               int number = 0;
+               bool proverka = false;
+               while(proverka == false)
+               {
+                   number = new Random().Next(10,99);
+                   proverka = true;
+                   for(int x = 0; x < array20.Length;x++)
+                       {
+                           if(number == array20[x])
+                           {
+                               proverka = false;
+                           }                            
+                       }            
+               }
+               array[i,j,z] = array20[i2] = number;
+               i2++;
+           }
+       }
+   }
+}
+
+//Метод 34. Вывод трехмерного массива
+public static void Printarray3(int[,,]array  )
+{
+  for(int i = 0;i < array.GetLength(0);i++)
+  {
+      for(int j = 0;j < array.GetLength(1);j++)
+      {
+          for(int z = 0;z < array.GetLength(2);z++)
+          {
+             Console.Write($"{array[i,j,z],4}");             
+          Console.Write($"({i}{j}{z})");
+          }
+      Console.WriteLine(); 
+      }
+    Console.WriteLine();  
+  }
+}
 }

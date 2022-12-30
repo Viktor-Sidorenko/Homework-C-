@@ -1,6 +1,6 @@
 using static Library1;
 
-//Метод 1. Задача 29. 
+ 
 public class Task29
 {
     public static void Task290()
@@ -13,7 +13,7 @@ public class Task29
        }
 }
 
-//Метод 2. Задача 25. 
+ 
 public class Task25
 {
     public static void Task250()
@@ -24,7 +24,8 @@ public class Task25
          Console.WriteLine($"{a} ^ {b} = {Task25(a,b)}");
       }
 }
-//Метод 3. Задача 27. 
+ 
+
 public class Task27
 {
     public static void Task270()
@@ -34,7 +35,7 @@ public class Task27
     }
 }
 
-//Метод 4. Задача 34.
+
 public class Task34
 {
    public static void Task340()
@@ -45,7 +46,7 @@ public class Task34
      }
 }
 
-//Метод 5. Задача 36.
+
 public class Task36
 {
     public static void Task360()
@@ -58,7 +59,7 @@ public class Task36
     }
 }
 
-//Метод 6. Задача 38;
+
 public class Task38 
 {
 public static void Task380()
@@ -74,7 +75,7 @@ public static void Task380()
 }
 }
 
-//Метод 7. Задача 41.
+
 public class Task41
 {
 public static void Task410()
@@ -87,7 +88,7 @@ public static void Task410()
    }
 }
 
-//Метод 8. Задача 43.
+
 public class Task43
 {
 public static void Task430()
@@ -105,6 +106,7 @@ public static void Task430()
      Console.WriteLine($" = > ({Task43(b1,b2,k1,k2)},{Task431(b2,k2,k1,b1)})");
 }     
 }
+
 
 public class Task47
 {
@@ -141,4 +143,44 @@ public class Task52
       Printarraytwointeger(br);
       decisiontask52(br);
     }
+}
+
+public class Task54
+{
+   public static void Task540()
+  {
+    Console.WriteLine("Задача 54");
+    int[,] number = CreateArray2(3,3);
+    FillArray2(number,1,999);
+    PrintArray(number);
+    Console.WriteLine();
+    Task54(number);
+    PrintArrayTask54(number);
+  } 
+}
+
+public class Task56
+{
+        public static void Task560()
+            {
+                Console.WriteLine("Задача 56");
+                int[,] number = CreateArray2(3,6);
+                FillArray2(number,1,999);
+                PrintArray(number);
+                Console.WriteLine();
+                int[] array2 = new int[6]; 
+                Task56(number,array2);
+            }
+}
+
+public class Task60
+{
+        public static void Task600()
+            {
+               Console.WriteLine("Задача 60"); 
+               int[,,] array = Createarray2(2,2,2);
+               int[] array20 = Createarray3(9);
+               Task60(array,array20);
+               Printarray3(array);
+            }
 }
