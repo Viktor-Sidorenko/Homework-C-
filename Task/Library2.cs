@@ -184,3 +184,42 @@ public class Task60
                Printarray3(array);
             }
 }
+
+public class Task64
+{
+        public static void Task640()
+        {
+            Console.WriteLine("Задача 64");
+            int n = InputNum("Введите n = ");
+            Console.Write($" n = {n} ->");
+            Sequence(n);
+            Console.WriteLine();
+        }
+}
+
+public class Task66
+{
+    public static void Task660()
+    {
+        Console.WriteLine("Задача 66");
+        int m = InputNum("Введите m = ");
+        int n = InputNum("Введите n = ");
+        Condition(n,m);
+        Console.Write($"{m}, {n} ->");
+        Sum(m, n, n = 0);
+        Console.WriteLine();
+    }
+}
+
+public class Task68
+{
+    public static void Task680()
+    {
+        Console.WriteLine("Задача 68");
+        int m = InputNum("Введите m = ");
+        int n = InputNum("Введите n = ");
+        int result = FunctionAkkerman(m,n); 
+        Console.Write($"m = {m}, n = {n} -> A(m,n) = {result} ");
+    }
+
+}

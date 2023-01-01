@@ -481,4 +481,66 @@ public static void Printarray3(int[,,]array  )
     Console.WriteLine();  
   }
 }
+
+//Метод 35. Ввод числа.
+public static int InputNum(string input)
+{
+      Console.Write(input);
+      int output = Convert.ToInt32(Console.ReadLine());
+      return output;
+}
+
+//Метод 36. Вывод числа в обратном порядке
+public static void Sequence(int n)
+{
+   if (n >= 1)
+   {
+       Console.Write($"{n,4}");
+       Sequence(n - 1);
+   }
+  
+}
+
+//Метод 37. Сумма чисел с выводом
+public static void Sum(int m, int n, int s)
+ {
+     s = s + n;
+     if (n <= m)
+    {
+         Console.Write($" {s} ");
+         return;
+     }
+     Sum(m, n - 1, s);
+}
+
+public static int Condition(int n,int m)
+{
+int step = m;
+
+ if (m > n)
+ {
+     m = n;
+     n = step;
+ }
+return n; 
+}
+
+//Метод 38. Функция Аккермана
+public static int FunctionAkkerman(int m, int n)
+{
+   if (m == 0)
+   {
+      return n + 1;
+   }
+   else 
+      if (n == 0 && m > 0)
+         {
+            return FunctionAkkerman(m - 1, 1);
+         }
+      else
+         {
+         return FunctionAkkerman(m - 1, FunctionAkkerman(m, n - 1));
+         }
+}
+
 }
